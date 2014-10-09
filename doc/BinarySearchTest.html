@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class BinarySearchTest - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>binary_search_test.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">MiniTest::Unit::TestCase
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-i-setup">#setup</a>
+    
+    <li ><a href="#method-i-teardown">#teardown</a>
+    
+    <li ><a href="#method-i-test_delete_17_one_child">#test_delete_17_one_child</a>
+    
+    <li ><a href="#method-i-test_delete_19_two_children">#test_delete_19_two_children</a>
+    
+    <li ><a href="#method-i-test_delete_25_no_children">#test_delete_25_no_children</a>
+    
+    <li ><a href="#method-i-test_in_order_traverse_full_tree">#test_in_order_traverse_full_tree</a>
+    
+    <li ><a href="#method-i-test_max">#test_max</a>
+    
+    <li ><a href="#method-i-test_min">#test_min</a>
+    
+    <li ><a href="#method-i-test_predecessor">#test_predecessor</a>
+    
+    <li ><a href="#method-i-test_predecessor_19">#test_predecessor_19</a>
+    
+    <li ><a href="#method-i-test_search_100">#test_search_100</a>
+    
+    <li ><a href="#method-i-test_search_18">#test_search_18</a>
+    
+    <li ><a href="#method-i-test_search_recursively_100">#test_search_recursively_100</a>
+    
+    <li ><a href="#method-i-test_search_recursively_18">#test_search_recursively_18</a>
+    
+    <li ><a href="#method-i-test_swap_18_19">#test_swap_18_19</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./BinarySearchTest.html">BinarySearchTest</a>
+  
+    <li><a href="./BinaryTree.html">BinaryTree</a>
+  
+    <li><a href="./Node.html">Node</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class BinarySearchTest</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-setup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="setup-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+        <span class="ruby-ivar">@btree</span> = <span class="ruby-constant">BinaryTree</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">10</span>)
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">9</span>)
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">12</span>)
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">11</span>)
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">6</span>)
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">1</span>)
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">19</span>)
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">7</span>)
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">5</span>)
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">17</span>)
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">18</span>)
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">25</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setup-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setup-method -->
+
+    
+      <div id="method-i-teardown" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">teardown</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="teardown-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">teardown</span>
+        <span class="ruby-ivar">@btree</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- teardown-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- teardown-method -->
+
+    
+      <div id="method-i-test_delete_17_one_child" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_delete_17_one_child</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_delete_17_one_child-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_delete_17_one_child</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">17</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">17</span>).<span class="ruby-identifier">key</span>
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">17</span>)
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">17</span>)
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">18</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">19</span>).<span class="ruby-identifier">left</span>.<span class="ruby-identifier">key</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">19</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">18</span>).<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">key</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_delete_17_one_child-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_delete_17_one_child-method -->
+
+    
+      <div id="method-i-test_delete_19_two_children" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_delete_19_two_children</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_delete_19_two_children-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_delete_19_two_children</span>
+        <span class="ruby-identifier">skip</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">19</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">19</span>).<span class="ruby-identifier">key</span>
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">19</span>)
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">19</span>)
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">12</span>,      <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">18</span>).<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">key</span>
+        <span class="ruby-comment">#assert_equal 17,     @btree.search(18).left.key</span>
+        <span class="ruby-comment">#assert_equal 25,     @btree.search(18).right.key</span>
+        <span class="ruby-comment">#assert_equal nil, @btree.search(17).right</span>
+        <span class="ruby-comment">#assert_equal nil, @btree.search(17).left</span>
+        <span class="ruby-comment">#assert_equal 18,     @btree.search(17).parent.key</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_delete_19_two_children-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_delete_19_two_children-method -->
+
+    
+      <div id="method-i-test_delete_25_no_children" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_delete_25_no_children</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>tests that modify the tree</p>
+          
+          
+
+          
+          <div class="method-source-code" id="test_delete_25_no_children-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_delete_25_no_children</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">25</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">25</span>).<span class="ruby-identifier">key</span>
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">25</span>)
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">25</span>)
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">19</span>).<span class="ruby-identifier">right</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_delete_25_no_children-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_delete_25_no_children-method -->
+
+    
+      <div id="method-i-test_in_order_traverse_full_tree" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_in_order_traverse_full_tree</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_in_order_traverse_full_tree-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_in_order_traverse_full_tree</span>
+        <span class="ruby-identifier">assert_equal</span> [<span class="ruby-value">1</span>,<span class="ruby-value">5</span>,<span class="ruby-value">6</span>,<span class="ruby-value">7</span>,<span class="ruby-value">9</span>,<span class="ruby-value">10</span>,<span class="ruby-value">11</span>,<span class="ruby-value">12</span>,<span class="ruby-value">17</span>,<span class="ruby-value">18</span>,<span class="ruby-value">19</span>,<span class="ruby-value">25</span>], <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">in_order_traverse</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_in_order_traverse_full_tree-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_in_order_traverse_full_tree-method -->
+
+    
+      <div id="method-i-test_max" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_max</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_max-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_max</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">25</span> , <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">max</span>.<span class="ruby-identifier">key</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_max-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_max-method -->
+
+    
+      <div id="method-i-test_min" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_min</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_min-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_min</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">1</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">min</span>.<span class="ruby-identifier">key</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_min-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_min-method -->
+
+    
+      <div id="method-i-test_predecessor" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_predecessor</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_predecessor-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_predecessor</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">10</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">predecessor</span>(<span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">11</span>)).<span class="ruby-identifier">key</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_predecessor-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_predecessor-method -->
+
+    
+      <div id="method-i-test_predecessor_19" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_predecessor_19</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_predecessor_19-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_predecessor_19</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">18</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">predecessor</span>(<span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">19</span>)).<span class="ruby-identifier">key</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_predecessor_19-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_predecessor_19-method -->
+
+    
+      <div id="method-i-test_search_100" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_search_100</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_search_100-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_search_100</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">100</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_search_100-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_search_100-method -->
+
+    
+      <div id="method-i-test_search_18" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_search_18</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_search_18-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_search_18</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">18</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">18</span>).<span class="ruby-identifier">key</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_search_18-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_search_18-method -->
+
+    
+      <div id="method-i-test_search_recursively_100" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_search_recursively_100</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_search_recursively_100-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_search_recursively_100</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search_recursively</span>(<span class="ruby-value">100</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_search_recursively_100-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_search_recursively_100-method -->
+
+    
+      <div id="method-i-test_search_recursively_18" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_search_recursively_18</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_search_recursively_18-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_search_recursively_18</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">18</span>, <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search_recursively</span>(<span class="ruby-value">18</span>).<span class="ruby-identifier">key</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_search_recursively_18-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_search_recursively_18-method -->
+
+    
+      <div id="method-i-test_swap_18_19" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_swap_18_19</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_swap_18_19-source">
+            <pre><span class="ruby-comment"># File binary_search_test.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_swap_18_19</span>
+        <span class="ruby-comment">#Need to find these first b/c the swap will break the search</span>
+        <span class="ruby-identifier">node_18</span> = <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">18</span>)
+        <span class="ruby-identifier">node_19</span> = <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">19</span>)
+        
+        <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">swap_nodes</span>(<span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">18</span>), <span class="ruby-ivar">@btree</span>.<span class="ruby-identifier">search</span>(<span class="ruby-value">19</span>))
+        <span class="ruby-comment">#self pointers</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">12</span>, <span class="ruby-identifier">node_18</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">key</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">17</span>, <span class="ruby-identifier">node_18</span>.<span class="ruby-identifier">left</span>.<span class="ruby-identifier">key</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">25</span>, <span class="ruby-identifier">node_18</span>.<span class="ruby-identifier">right</span>.<span class="ruby-identifier">key</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">17</span>, <span class="ruby-identifier">node_19</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">key</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">node_19</span>.<span class="ruby-identifier">left</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">node_19</span>.<span class="ruby-identifier">right</span>
+        <span class="ruby-comment">#parents&#39; child pointers</span>
+        <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">18</span>, <span class="ruby-identifier">node_18</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">right</span>.<span class="ruby-identifier">key</span>
+        <span class="ruby-comment"># assert_equal 19, node_19.parent.right.key</span>
+        <span class="ruby-comment"># #childrens&#39; parent pointers</span>
+        <span class="ruby-comment"># assert_equal 18, node_18.right.parent.key</span>
+        <span class="ruby-comment"># assert_equal 18, node_18.left.parent.key</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_swap_18_19-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_swap_18_19-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
